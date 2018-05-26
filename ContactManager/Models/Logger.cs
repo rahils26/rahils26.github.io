@@ -9,7 +9,7 @@ namespace ContactManager.Models
 {
     public static class FileLogger
     {
-        private static string filePath = WebConfigurationManager.AppSettings["LogFile"].ToString();
+        private static string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs\\log.txt");
         public static void Log(string message)
         {
             try

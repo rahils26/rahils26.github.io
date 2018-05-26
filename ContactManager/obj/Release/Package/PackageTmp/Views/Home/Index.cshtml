@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Contacts";
+}
+
+
+<div class="contacts-container">
+    <div class="contact-list">
+        <table class="contact-list-table">
+            <tr>
+                <th> </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Status
+                </th>
+                <th></th>
+            </tr>
+            
+                @for (int i = 0; i < ViewBag.Contacts.Count; i++)
+                {
+                    var val = ViewBag.Contacts[i];
+                    <tr class="contact-holder"> 
+                        <td style="visibility:hidden" class="contact-id">@val.ID</td>
+                        <td>@val.FirstName </td>
+                        <td>@val.LastName</td>
+                        <td>@val.PhoneNumber</td>
+                        <td>@val.Email</td>
+                        <td>@val.ContactStatus</td>
+                        <td>
+                            <input type="button" value="Edit Contact" class="edit-contact button" />
+                            <input type="button" value="Delete Contact" class="delete-contact button button-delete"/>                            
+                        </td>
+                    </tr>
+                }
+           
+        </table>
+
+        <input type="button" id="add-new-contact" value="Add Contact" class="button"/>
+    </div>
+
+</div>

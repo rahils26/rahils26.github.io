@@ -5,7 +5,7 @@ Pre Requisite
 3) SQL Server Management Studio for running script
 
 Steps :
-1) Open SQL Server Management Studio and run scripts in ContactManager.sql
+1) Open SQL Server Management Studio and run scripts in ContactManager/ContactManager.sql
 2) Clone or Download repository
 3) Open ContactManager.sln file in Visual Studio
 4) Update connection string in Web.config
